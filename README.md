@@ -1,4 +1,4 @@
-# &lt;my-repo&gt;
+# &lt;ganbaru-zoi&gt;
 
 > A bare minimum custom element starter-kit using [Polymer](http://www.polymer-project.org/).
 >
@@ -8,17 +8,16 @@
 
 ## Demo
 
-[Check it live!](http://my-user.github.io/my-repo)
+[Check it live!](http://sisidovski.github.io/zoi)
+
 
 ## Install
 
 Install the component using [Bower](http://bower.io/):
 
 ```sh
-$ bower install my-repo --save
+$ bower install ganbaru-zoi --save
 ```
-
-Or [download as ZIP](https://github.com/my-user/my-repo/archive/master.zip).
 
 ## Usage
 
@@ -31,32 +30,20 @@ Or [download as ZIP](https://github.com/my-user/my-repo/archive/master.zip).
 2. Import Custom Element:
 
     ```html
-    <link rel="import" href="bower_components/my-repo/dist/my-element.html">
+    <link rel="import" href="bower_components/ganbaru-zoi/dist/ganbaru-zoi.html">
     ```
 
 3. Start using it!
 
     ```html
-    <my-element></my-element>
+    <ganbaru-zoi></ganbaru-zoi>
     ```
 
 ## Options
 
-Attribute     | Options     | Default      | Description
----           | ---         | ---          | ---
-`foo`         | *string*    | `bar`        | Lorem ipsum dolor.
-
-## Methods
-
-Method        | Parameters   | Returns     | Description
----           | ---          | ---         | ---
-`unicorn()`   | None.        | Nothing.    | Magic stuff appears.
-
-## Events
-
-Event         | Description
----           | ---
-`onsomething` | Triggers when something happens.
+Attribute         | Options     | Default                           | Description
+---               | ---         | ---                               | ---
+`message`         | *string*    | `今日も一日がんばるぞい！`        | `青葉に言わせたいこと`.
 
 ## Development
 
@@ -102,7 +89,7 @@ In order to run it locally you'll need to fetch some dependencies and a basic se
 
 ## History
 
-For detailed changelog, check [Releases](https://github.com/my-user/my-repo/releases).
+For detailed changelog, check [Releases](https://github.com/sisidovski/zoi/releases).
 
 ## License
 
