@@ -1,16 +1,15 @@
 <!-- Import Polymer -->
 <link rel="import" href="../bower_components/polymer/polymer.html">
-<link rel="import" href="../bower_components/polymer-ui-card/polymer-ui-card.html">
 <link rel="import" href="../bower_components/paper-shadow/paper-shadow.html">
 
 <!-- Define your custom element -->
-<polymer-element name="ganbaru-zoi">
+<polymer-element name="ganbaru-zoi" attributes="message">
   <template>
     <style>
       :host {
         display: block;
       }
-      .item {
+      .image {
         width: 380px;
         margin: 10px;
       }
@@ -18,41 +17,39 @@
         width: 400px;
         background: #FFF;
         margin: 10px;
+        writing-mode: vertical-rl;
+        -moz-writing-mode: vertical-rl;
+        -webkit-writing-mode: vertical-rl;
+      }
+      .message {
+        position: absolute;
+        width: 72px;
+        height: 162px;
+        top: 18px;
+        left: 312px;
+        overflow: hidden;
+        font-size: 18px;
+        vertical-align: top;
       }
     </style>
-      <div class="card">
-        <img class="item" src="https://pbs.twimg.com/media/Bm32QovCYAAygQO.jpg:large">
-        <paper-shadow z="1"></paper-shadow>
-      </div>
+    <div class="card" on-Click="{{onClick}}">
+        <img class="image" src="https://pbs.twimg.com/media/BuIGeAxCQAABwpR.jpg">
+        <div class="message">
+          <p>{{message}}</p>
+        </div>
+      <paper-shadow z="{{shadow}}" animated></paper-shadow>
+    </div>
   </template>
   <script>
-      Polymer('ganbaru-zoi', {
-          // Fires when an instance of the element is created
-          created: function() {
-            console.log('created');
-          },
-
-          // Fires when the element’s initial set of children and siblings are guaranteed to exist
-          domReady: function() {
-            console.log('domReady');
-          },
-
-          // Fires when the "<polymer-element>" has been fully prepared
-          ready: function() {
-            console.log('ready');
-          },
-
-          // Fires when the element was inserted into the document
-          attached: function() {
-            console.log('attached');
-          },
-
-          // Fires when the element was removed from the document
-          detached: function() {},
-
-          // Fires when an attribute was added, removed, or updated
-          attributeChanged: function(attr, oldVal, newVal) {}
-      });
+    Polymer('ganbaru-zoi', {
+      created: function() {
+        this.shadow = 1;
+        this.message = (this.message)? this.message : '今日も一日がんばるぞい！';
+      },
+      onClick: function(e, detail, sender) {
+        this.shadow = (this.shadow === 1)? 5 : 1;
+      },
+    });
   </script>
 
 </polymer-element>
