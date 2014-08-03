@@ -1,0 +1,55 @@
+<!-- Import Polymer -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-shadow/paper-shadow.html">
+
+<!-- Define your custom element -->
+<polymer-element name="ganbaru-zoi" attributes="message">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      .image {
+        width: 380px;
+        margin: 10px;
+      }
+      .card {
+        width: 400px;
+        background: #FFF;
+        margin: 10px;
+        writing-mode: vertical-rl;
+        -moz-writing-mode: vertical-rl;
+        -webkit-writing-mode: vertical-rl;
+      }
+      .message {
+        position: absolute;
+        width: 72px;
+        height: 162px;
+        top: 18px;
+        left: 312px;
+        overflow: hidden;
+        font-size: 18px;
+        vertical-align: top;
+      }
+    </style>
+    <div class="card" on-Click="{{onClick}}">
+        <img class="image" src="https://pbs.twimg.com/media/BuIGeAxCQAABwpR.jpg">
+        <div class="message">
+          <p>{{message}}</p>
+        </div>
+      <paper-shadow z="{{shadow}}" animated></paper-shadow>
+    </div>
+  </template>
+  <script>
+    Polymer('ganbaru-zoi', {
+      created: function() {
+        this.shadow = 1;
+        this.message = (this.message)? this.message : '今日も一日がんばるぞい！';
+      },
+      onClick: function(e, detail, sender) {
+        this.shadow = (this.shadow === 1)? 5 : 1;
+      },
+    });
+  </script>
+
+</polymer-element>
