@@ -1,0 +1,19 @@
+{
+    "name": "zoi",
+    "version": "0.0.0",
+    "description": "Zoi Custom Element",
+    "license": "MIT",
+    "main": "dist/my-element.html",
+    "keywords": [
+        "polymer",
+        "web-components"
+    ],
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ],
+    "dependencies": {
+        "polymer": "Polymer/polymer#~0.3.3"
+    }
+}
