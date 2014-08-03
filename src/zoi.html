@@ -1,0 +1,58 @@
+<!-- Import Polymer -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/polymer-ui-card/polymer-ui-card.html">
+<link rel="import" href="../bower_components/paper-shadow/paper-shadow.html">
+
+<!-- Define your custom element -->
+<polymer-element name="ganbaru-zoi">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      .item {
+        width: 380px;
+        margin: 10px;
+      }
+      .card {
+        width: 400px;
+        background: #FFF;
+        margin: 10px;
+      }
+    </style>
+      <div class="card">
+        <img class="item" src="https://pbs.twimg.com/media/Bm32QovCYAAygQO.jpg:large">
+        <paper-shadow z="1"></paper-shadow>
+      </div>
+  </template>
+  <script>
+      Polymer('ganbaru-zoi', {
+          // Fires when an instance of the element is created
+          created: function() {
+            console.log('created');
+          },
+
+          // Fires when the element’s initial set of children and siblings are guaranteed to exist
+          domReady: function() {
+            console.log('domReady');
+          },
+
+          // Fires when the "<polymer-element>" has been fully prepared
+          ready: function() {
+            console.log('ready');
+          },
+
+          // Fires when the element was inserted into the document
+          attached: function() {
+            console.log('attached');
+          },
+
+          // Fires when the element was removed from the document
+          detached: function() {},
+
+          // Fires when an attribute was added, removed, or updated
+          attributeChanged: function(attr, oldVal, newVal) {}
+      });
+  </script>
+
+</polymer-element>
