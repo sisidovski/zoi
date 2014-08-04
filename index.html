@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>&lt;ganbaru-zoi&gt;</title>
 
@@ -9,12 +9,26 @@
 
     <!-- Importing Custom Elements -->
     <link rel="import" href="src/zoi.html">
-</head>
-<body>
+    <link rel="import" href="src/zoi-text.html">
+  </head>
+  <body>
+    <h1>今日も一日がんばるぞい！</h1>
 
     <!-- Using Custom Elements -->
-    <ganbaru-zoi></ganbaru-zoi>
-    <ganbaru-zoi message="イーグルジャンプ"></ganbaru-zoi>
+    <div class="card">
+      <ganbaru-zoi></ganbaru-zoi>
+    </div>
+    <div class="card">
+      <ganbaru-zoi message="イーグルジャンプ"></ganbaru-zoi>
+    </div>
+    <div class="card">
+      <ganbaru-zoi-text></ganbaru-zoi-text>
+    </div>
 
-</body>
+    <style>
+      .card {
+        float: left;
+      }
+    </style>
+  </body>
 </html>
