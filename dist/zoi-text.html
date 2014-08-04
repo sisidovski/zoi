@@ -1,0 +1,22 @@
+<!-- Import Polymer -->
+<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="./zoi.html">
+<link rel="import" href="../../paper-input/paper-input.html">
+
+<!-- Define your custom element -->
+<polymer-element name="ganbaru-zoi-text" attributes="message">
+  <template>
+    <ganbaru-zoi message="{{message}}"></ganbaru-zoi>
+    <input type="text" value="{{value}}" style="width: 200px">
+  </template>
+  <script>
+    Polymer('ganbaru-zoi-text', {
+      created: function() {
+        this.message = (this.message)? this.message : '今日も一日がんばるぞい！';
+      },
+      valueChanged: function() {
+        this.message = this.value;
+      },
+    });
+  </script>
+</polymer-element>
